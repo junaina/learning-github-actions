@@ -6,6 +6,6 @@ describe("GET /", () => {
   it("should returna hello message", async () => {
     const res = await request(app).get("/");
     expect(res.statusCode).toBe(200);
-    expect(res.body).toBe("Hello from Express!");
+    expect(res.body).toBe({ message: "Hello from Express!" });
   });
 });
